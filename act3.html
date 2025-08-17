@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructure Weather API</title>
+</head>
+<body>
+    <script>
+const fakeData = {
+ location: { name: "Manila" },
+ current: {
+ temp_c: 30,
+ condition: {
+ text: "Partly Cloudy",
+ },
+ },
+};
+// Use destructuring
+const {
+ location: { name },
+ current: {
+ temp_c,
+ condition: { text },
+ },
+} = fakeData;
+console.log(`Weather in ${name}: ${temp_c}°C and ${text}`);
+ </script>
+</body>
+</html>
